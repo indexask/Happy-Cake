@@ -1,16 +1,17 @@
 import Nav from 'react-bootstrap/Nav';
+import { Link } from 'react-router-dom';
 
 function Navbar() {
   return (
-    <Nav className='bg-danger vw-100 d-flex'>
+    <Nav className='bg-danger p-2 vw-100 d-flex'>
       <Nav.Item>
-        <Nav.Link className='text-light' href="/">Home <span className='icon-navbar'>🏠</span></Nav.Link>
+        <Link to="/" className='text-light a'> Home <span className='icon-navbar'>🏠</span></Link>
       </Nav.Item>
       <Nav.Item>
-        <Nav.Link className='text-light' href='/contacto'>Contacto<span className='icon-navbar'>📒</span></Nav.Link>
+        <Link to="/contacto" className='text-light a'> Contacto <span className='icon-navbar'>📒</span></Link>
       </Nav.Item>
       <Nav.Item className='ms-auto'>
-        <Nav.Link className='text-light' >Happy Cake<span className='icon-navbar happy'>🍰</span></Nav.Link>
+      <Link to="/" className='text-light a'> Happy Cake <span className='icon-navbar happy'>🍰</span></Link>
       </Nav.Item>
     </Nav>
   );
